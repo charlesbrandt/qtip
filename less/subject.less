@@ -1,0 +1,316 @@
+@import 'normalize.less';
+@import 'grid.less';
+@import 'colors.less';
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+
+////////////
+// LAYOUT //
+////////////
+
+html {
+     height: 100%;
+}
+
+body {
+     height: 100%;
+     background-color: @background;
+     //background-color: @grayLighter;
+}
+
+
+#static-top-half {
+    width:100%;
+    //this needs to be kept in sync with #columns margin-height:
+
+    height: 310px;
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: @background;
+}
+
+#relative-top-half {
+    width:100%;
+    background-color: @background;
+}
+
+//responses
+.questions, .header {
+    width: 90%;
+}
+.question {
+    width: 100%;
+    //display: inline-block;
+}
+
+.thanks {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#instructions {
+    font-size: small;
+    //font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.neutral {
+    padding: 10px;
+}
+
+.col1 {
+    .column(1);
+}
+
+.col2 {
+    .column(10);
+}
+
+
+//main question formatting
+#question {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.helper {
+    display: inline-block;
+    //display: table-cell;
+    //height: 100px;
+    height: 100%;
+    vertical-align: middle;
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //margin: auto;
+}
+
+#card_area {
+    height: 100%;
+}
+
+#wrapper {
+    height: 75%;
+}
+
+.card_arrow {
+    opacity: 0.5;
+    vertical-align: middle;
+    height: 100px;
+    min-height: 100px;    
+}
+
+.card_row {
+    //display: inline-block;
+    float: left;
+    list-style-type: none;
+    //position: relative;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#card {
+    /*border-style: solid;
+    border-width: 1px;
+    background-color: @white;
+    text-align: left;
+    font-size: medium;
+    */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+
+    padding: 20px;
+
+    background: url(/img/background.png);
+    background-size: 550px 151px;
+    background-repeat: no-repeat;
+    height: 120px;
+    max-width: 510px;
+    width: 100%;
+    display: inline-block;
+}
+
+#empty {
+    border-style: solid;
+    border-width: 1px;
+    background-color: @white;
+    text-align: left;
+    font-size: medium;
+    margin: 10px;
+    padding: 20px;
+
+    height: 100px;
+    max-width: 500px;
+    width: 100%;
+    display: inline-block;
+}
+
+#statements {
+    //overflow: scroll;
+    padding: 10px;
+    text-align: center;
+    height: 185px;
+}
+
+li.statement {
+    //display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+    padding: 2px;
+
+    border-style: solid;
+    border-width: 1px;
+    //background-color: @grayLighter;
+    background-color: @white;
+    //background-color: @background;
+    //margin-end: 1em;
+    margin: 0px;
+    padding: 10px;
+    font-size: small;
+
+}
+
+//an empty space in the column
+.placeholder {
+    //display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+
+    border-style: solid;
+    border-width: 1px;
+    //background-color: @grayLighter;
+    background-color: @white;
+    //background-color: @background;
+    margin: 0px;
+    //padding: 10px;
+    height: 100px;
+    width: 99%;
+}
+
+#columns {
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    //overflow: scroll;
+    position:static;
+    padding-bottom: 20px;
+    
+}
+
+#columns_list { 
+    height: 100px;
+}
+
+li.column {
+    //display: inline-block;
+    float: left;
+    list-style-type: none;
+    vertical-align: top;
+
+    //margin-end: 1em;
+    margin: 2px;
+    //height: 200px;
+}
+
+.column_area {
+    border-style: solid;
+    border-width: 1px;
+    background-color: @gray;
+    padding: 5px;
+}
+
+.column_header {
+    //display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.sortable { 
+    //display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    padding: 10px;
+}
+
+#responses { 
+    padding: 20px;
+}
+
+.question { 
+    display: inline-block;
+    padding: 2px;
+}
+
+
+#labels {
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	right top,
+	color-stop(0, #E60303),
+	color-stop(1, #19DE03)
+);
+background-image: -o-linear-gradient(right, #E60303 0%, #19DE03 100%);
+background-image: -moz-linear-gradient(right, #E60303 0%, #19DE03 100%);
+background-image: -webkit-linear-gradient(right, #E60303 0%, #19DE03 100%);
+background-image: -ms-linear-gradient(right, #E60303 0%, #19DE03 100%);
+background-image: linear-gradient(to right, #E60303 0%, #19DE03 100%);
+
+}
+
+.label {
+    width: 43%;
+    display: inline-block;
+    font-size: large;
+    font-weight: bold;
+    //margin-left: 50px;
+    //margin-right: 50px;
+}
+
+.padl {
+    width: 5%;
+    display: inline-block;
+}
+
+.padr {
+    width: 2%;
+    display: inline-block;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+

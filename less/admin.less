@@ -1,0 +1,147 @@
+@import 'normalize.less';
+@import 'grid.less';
+@import 'colors.less';
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+@header-margin: 320px;
+
+////////////
+// LAYOUT //
+////////////
+
+html {
+     height: 100%;
+}
+
+body {
+     height: 100%;
+     background-color: @background;
+     //background-color: @grayLighter;
+}
+
+// header
+header {
+    width: 100%;
+    text-align: center;
+    background-color: @header;
+    padding-bottom: 5px;
+}
+header .logo {
+//  color: @header;
+}
+header p.logo {
+    color: #002b36;
+    text-decoration: none;
+}
+header a.home_link {
+    text-decoration: none;
+    color: @black;
+}
+header img {
+    //max-width: 800px;
+    //width: 100%;
+    margin: 0 auto 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+#content {
+     height: 100%;
+}
+
+#welcome {
+    margin: 0 auto 0;
+}
+
+#description {
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 10px;
+                    
+}
+
+.answer {
+    margin-bottom: 30px;                    
+}
+
+footer {
+    text-align: center;
+    .column(12);
+}
+
+
+.subject {
+    width: 100%;
+    list-style-type: none;
+}
+
+.subject_row {
+    width: 13%;
+    display: inline-block;
+}
+
+
+.col1 {
+    .column(2);
+}
+
+.col2 {
+    .column(10);
+}
+
+.details {
+    //width: 13%;
+    width: 80%;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.error {
+    color: @red;
+}
+
+.message {
+    color: @red;
+    font-style: italic;
+}
+
+.bookmark {
+    color: @red;
+    font-weight: bold;
+}
+
+// main column & sidebar
+#maincolumn {
+    .column(8);
+}
+.sidebar {
+    .column(2);
+}
+
+@media screen and (max-width: 720px) {
+    #maincolumn {
+	.column(8);
+	margin-bottom: 1em;
+    }
+}
+
